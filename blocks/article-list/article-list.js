@@ -1,7 +1,3 @@
-export default function decorate(block) {
-  getArticles(block);
-}
-
 async function getArticles(block) {
   fetch("/article-index.json")
     .then((response) => response.json())
@@ -21,4 +17,8 @@ async function getArticles(block) {
       list.append(fragment);
       block.append(list);
     });
+}
+
+export default function decorate(block) {
+  getArticles(block);
 }
