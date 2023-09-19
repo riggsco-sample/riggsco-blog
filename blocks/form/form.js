@@ -130,8 +130,7 @@ function fill(form) {
   if (action === '/tools/bot/register-form') {
     const loc = new URL(window.location.href);
     form.querySelector('#owner').value = loc.searchParams.get('owner') || '';
-    form.querySelector('#installationId').value =
-      loc.searchParams.get('id') || '';
+    form.querySelector('#installationId').value = loc.searchParams.get('id') || '';
   }
 }
 
